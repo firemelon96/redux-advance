@@ -9,14 +9,9 @@ const ProductItem = (props) => {
   const { title, price, description, id } = props;
 
   const addToCartHandler = () => {
-    dispatch(
-      addItemToCart({
-        id,
-        title,
-        price,
-      })
-    );
+    dispatch(addItemToCart({ id, title, price }));
   };
+
   return (
     <li className={classes.item}>
       <Card>
